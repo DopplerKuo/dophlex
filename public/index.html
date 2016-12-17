@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns:og='http://ogp.me/ns#'>
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Dophlex | 響應式網頁助手</title>
+  <meta content="Dophlex | 響應式網頁助手" property="og:title">
+  <meta content="Dophlex | 響應式網頁助手" property="og:site_name">
+  <meta content="基於 CSS 的 flexbox 屬性，簡單輕量，讓你輕鬆組裝你的響應式網頁。" property="og:description">
+  <meta content="/assets/img/common/facebook.jpg" property="og:image">
+  <link href="/assets/img/common/favicon.png" rel="shortcut icon">
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+  <header class="flex-jfs-ac-">
+    <div class="logo">
+      <img src="/assets/img/common/logo.png" alt="">
+    </div>
+    <div id="download">
+    <p style="color: rgba(255,255,255,.67); font-size: 13px;">
+      v2 版本比 v1 新增了 css 變數屬性，<br>  
+      可利用 <b>--margin-spacing</b> 屬性去改變元素與元素間的間距<br>
+      瀏覽器支援度： v1 <b>95%</b>｜ v2 <b>65%</b> ( ios 9.0 不適用 )
+    </p>
+    <div class="a">
+      <a href="/assets/download/dophlex_v1.zip" download>下載 v1 版本</a>
+      <a href="/assets/download/dophlex_v2.zip" download>下載 v2 版本</a>
+    </div>
+    </div>
+  </header>
+  <section id="doppler">
+    <div class="content">
+      <div class="try_it_content">
+        <div id="try_it">
+          <h2>試試看吧！</h2>
+          <p>開頭一定要有 " flex "，結尾一定要補一個 “ - ”</p>
+          <p class="p">範例：“-l3-” 代表著，螢幕寬 large 尺寸的時候，分割成三列，以此類推。</p>
+          <div class="input">
+            class="
+            <input 
+              v-model="className" type="text"
+              placeholder="flex-l6-m3-s2-xs1-">"
+          </div>
+          <div class="input">
+            --margin-space: <input v-model="marginSpace" type="text"> px
+          </div>
+        </div>
+        <div data-id="try_it" class="{{ className || 'flex' }}">
+          <div class="box" style="--margin-space:{{ marginSpace || '5' }}px;"></div>
+          <div class="box" style="--margin-space:{{ marginSpace || '5' }}px;"></div>
+          <div class="box" style="--margin-space:{{ marginSpace || '5' }}px;"></div>
+          <div class="box" style="--margin-space:{{ marginSpace || '5' }}px;"></div>
+          <div class="box" style="--margin-space:{{ marginSpace || '5' }}px;"></div>
+          <div class="box" style="--margin-space:{{ marginSpace || '5' }}px;"></div>
+        </div>
+      </div>
+      <div class="blue flex-l4-m2-s1-">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+      <div class="yellow flex-l6-m3-s2-">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+      <div class="red flex-l5-m3-s2-xs1-f10-">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+      <div class="yellow flex-l4-m2-s1-">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+      <div class="blue flex-l6-m3-s2-">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+    </div>
+  </section>
+</body>
+<script src="/assets/js/vendor/jquery-2.1.4.min.js"></script>
+<script src="/assets/js/vendor/vue.min.js"></script>
+<script src="/assets/js/index.js"></script>
+</html>
